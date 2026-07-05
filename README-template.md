@@ -1,4 +1,6 @@
-# README.md TEMPLATE
+# The Admin Dashboard
+
+This is the solution to the final project in [Intermediate HTML and CSS](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard) from [The Odin Project](https://www.theodinproject.com/).
 
 ## Table of contents
 
