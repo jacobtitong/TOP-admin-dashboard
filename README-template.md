@@ -12,11 +12,8 @@ This is the solution to the final project in [Intermediate HTML and CSS](https:/
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -38,67 +35,89 @@ This is the solution to the final project in [Intermediate HTML and CSS](https:/
 - CSS Grid
 - [Josh Comeau's Modern CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/)
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned that CSS Grid works very well for fixed, two-dimensional layouts, while Flexbox works well for layouts that are based on the content.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+In this example, I used Grid for the main page structure and Flexbox for aligning items within smaller containers.
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+body {
+  display: grid;
+  grid-template: 150px 1fr / 1fr 5fr;
+  grid-template-areas: "sidebar header" "sidebar main";
+}
+
+.dashboard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+I learned the importance of semantics. Though my implementation is not perfect, I still managed to make use of it by using tags like `<header>` and `<main>` to give the document better meaning.
+
+Documentation is also very important. Using comments allowed me to separate my CSS into well-defined parts, making my code much easier to read and maintain.
+
+Initially, setting the body's width to `100vw` added an unwanted horizontal scrollbar to my webpage. I learned that to fix this, I should set it to its default `100%` instead to cleanly remove it.
+
+```css
+body {
+  width: 100%; /* Prevents the horizontal scrollbar */
+  height: 100vh;
+  margin: 0;
+}
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+I realized that the contents of an element can actually go past a grid track if not handled properly. Being mindful of how content sizes affect defined grid areas is crucial to prevent the layout from breaking.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Instead of relying strictly on image files, I learned that you can download SVGs online and embed them directly into your HTML document. This makes it incredibly easy to style them with CSS later.
+
+```html
+<svg
+  xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="M10 21H14C14 22.1 13.1 23 12 23S10 22.1 10 21M21 19V20H3V19L5 17V11C5 7.9 7 5.2 10 4.3V4C10 2.9 10.9 2 12 2S14 2.9 14 4V4.3C17 5.2 19 7.9 19 11V17L21 19M17 11C17 8.2 14.8 6 12 6S7 8.2 7 11V18H17V11Z"
+  />
+</svg>
+```
+
+```css
+/* Styling the embedded SVGs */
+.dashboard svg {
+  width: 45px;
+  height: 45px;
+  fill: white;
+}
+```
+
+Using the repeat() function along with auto-fit or auto-fill allows for great responsive design. It automatically wraps my grid items without needing to write multiple media queries.
+
+```css
+/* Automatically sizing and wrapping grid items */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+In the future, I'd like to get into CSS custom properties or variables and how to properly use them because I believe it will help me in the long run for collaborating with other developers and for future developments of older projects.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-### AI Collaboration
-
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+- [Josh Comeau's Modern CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/) - This helped me stop overthinking of default styles from web browsers.
+- [Material Icon Assets](https://pictogrammers.com/library/mdi/) - This is an amazing library of free-to-use SVGs which made my website look interesting.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Github - [jacobtitong](https://github.com/jacobtitong)
+- Linkedin - [Jacob Titong](https://www.linkedin.com/in/jacobtitong/)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I'd like to give my gratitude to the Odin Project's community for being very supportive and helpful with feedbacks, especially in their [Discord server](https://discord.com/invite/fbFCkYabZB) which gave me a boost of motivation to keep learning through their curriculum.
