@@ -19,7 +19,7 @@ This is the solution to the final project in [Intermediate HTML and CSS](https:/
 
 ### Screenshot
 
-![Desktop Screenshot](./desktop_screenshot.png)
+![Desktop Screenshot](./screenshots/desktop_screenshot.png)
 
 ### Links
 
@@ -104,7 +104,8 @@ Using the repeat() function along with auto-fit or auto-fill allows for great re
 }
 ```
 
-[!NOTE]I also learned that git repositories CAN get CORRUPTED. Unfortunately, it happened to this project which made me lose all of old commits. Lesson learned: always push your commits once your done working at a certain point!
+> [!NOTE]
+> I also learned that git repositories CAN get CORRUPTED. Unfortunately, it happened to this project which made me lose all of old commits. Lesson learned: always push your commits once your done working at a certain point!
 
 ### Continued development
 
